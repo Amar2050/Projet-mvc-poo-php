@@ -10,11 +10,22 @@ if (empty($_GET['page'])) {
     require_once "view/home.view.php";
 }else {
     $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL ));
-    var_dump($url); // tester sur url --> projet.com/games/delete url[0] // games
-    switch ($_GET['page']) {
+    switch ($url[0]) {
         case 'accueil': require_once "view/home.view.php";
         break;
-        case 'games': $gameController->displayGames();
+        case 'games': 
+            if (empty($url[1])) {
+                $gameController->displayGames();
+            } elseif ($url[1] === "add"){
+                $gameController->newGameForm();
+            } elseif ($url[1] === "edit"){
+            } elseif ($url[1] === "gvalid"){
+                $gameController->newGameValidation();
+            } elseif ($url[1] === "edit"){
+                echo "modifier un jeu";
+            } elseif ($url[1] === "delete"){
+                echo "supprimer un jeu";
+            }
         break;
     }
 }

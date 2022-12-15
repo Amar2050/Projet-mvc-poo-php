@@ -20,7 +20,7 @@
 
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="#">Game-X</a>
+                <a class="navbar-brand" href="<?= URL ?>">Game-X</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,10 +30,10 @@
 
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="accueil">Accueil</a>
+                            <a class="nav-link active" href="<?= URL ?>accueil">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="games">Jeux</a>
+                            <a class="nav-link" href="<?= URL ?>games">Jeux</a>
                         </li>
                     </ul>
 

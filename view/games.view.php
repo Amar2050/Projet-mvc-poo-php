@@ -22,7 +22,7 @@
     </tbody>
 </table>
 
-<a href="" class="btn btn-success d-block m-auto w-25">
+<a href="<?= URL ?>games/add" class="btn btn-success d-block m-auto w-25">
     Ajouter un jeu    
     <i class="fa-solid fa-gamepad fa-2x"></i>
 </a>
