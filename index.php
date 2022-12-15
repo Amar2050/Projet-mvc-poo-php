@@ -10,7 +10,7 @@ if (empty($_GET['page'])) {
     require_once "view/home.view.php";
 }else {
     $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL ));
-    var_dump($url); // tester sur url --> projet.com/games/delete games[0] // games
+    var_dump($url); // tester sur url --> projet.com/games/delete url[0] // games
     switch ($_GET['page']) {
         case 'accueil': require_once "view/home.view.php";
         break;
