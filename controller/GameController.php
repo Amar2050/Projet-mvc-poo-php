@@ -24,7 +24,7 @@ class GameController {
 
     public function editGameForm($id){
         $game = $this->gameManager->getGameById($id);
-        var_dump($game);
+        require_once "view/edit.game.view.php";
     }
 
 }
