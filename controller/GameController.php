@@ -18,7 +18,8 @@ class GameController {
         require_once "view/new.game.view.php";
     }
     public function newGameValidation(){
-        echo "validation";
+        $this->gameManager->newGameDB($_POST['title'],$_POST['nbPlayers']);
+        header('Location:' . URL . 'games');
     }
 
 
