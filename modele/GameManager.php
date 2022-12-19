@@ -43,5 +43,13 @@ class GameManager extends Manager {
         }
     }
 
+    public function getGameById($id){
+        foreach($this->games as $game){
+            if($game->getId() == $id){
+                return $game;
+            }
+        }
+    }
+
     
 }

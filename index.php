@@ -18,11 +18,10 @@ if (empty($_GET['page'])) {
                 $gameController->displayGames();
             } elseif ($url[1] === "add"){
                 $gameController->newGameForm();
-            } elseif ($url[1] === "edit"){
             } elseif ($url[1] === "gvalid"){
                 $gameController->newGameValidation();
             } elseif ($url[1] === "edit"){
-                echo "modifier un jeu";
+                echo $url[2];
             } elseif ($url[1] === "delete"){
                 echo "supprimer un jeu";
             }
