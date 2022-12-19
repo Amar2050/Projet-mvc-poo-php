@@ -22,5 +22,9 @@ class GameController {
         header('Location:' . URL . 'games');
     }
 
+    public function editGameForm($id){
+        $game = $this->gameManager->getGameById($id);
+        var_dump($game);
+    }
 
 }
