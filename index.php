@@ -22,11 +22,11 @@ if (empty($_GET['page'])) {
                 $gameController->newGameValidation();
             } elseif ($url[1] === "edit"){
                 $gameController->editGameForm($url[2]);
-            } elseif ($url[1] === "delete"){
-            } elseif ($url[1] === "editvalid"){
+            } 
+                elseif ($url[1] === "editvalid"){
                 $gameController->editGameValidation();
             } elseif ($url[1] === "delete"){
-                echo "supprimer un jeu";
+                $gameController->deleteGame($url[2]);
             }
         break;
     }
